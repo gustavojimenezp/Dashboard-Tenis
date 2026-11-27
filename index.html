@@ -1,0 +1,919 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Copa Gigante del Hogar 2026</title>
+<meta name="description" content="Torneo Departamental Ranking Cup 2026 – Copa Gigante del Hogar. Complejo de Raquetas, del 28 de noviembre al 12 de diciembre. Cuadros clasificatorios 2da, 3ra, 4ta, 5ta y Damas.">
+<meta name="theme-color" content="#0a1a3a">
+<meta name="claude:viewport-fit-sides" content="cover">
+<script>document.documentElement.classList.add("js")</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,700;1,800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0a1a3a;      /* azul noche */
+  --navy-2:#102a5c;
+  --blue:#1660d6;      /* azul cancha */
+  --blue-soft:#e8f0fc;
+  --yellow:#ffd22e;    /* amarillo pelota */
+  --ink:#0d1b33;
+  --muted:#5f6c80;
+  --line:#e2e7ef;
+  --bg:#ffffff;
+  --bg-2:#f5f7fb;
+  --cond:"Barlow Condensed",Impact,sans-serif;
+  --deep:#0a1a3a;      /* superficies oscuras fijas (hero, info, pie) */
+  --card:#ffffff;
+  --header:rgba(255,255,255,.96);
+  --hit:#fff7d1; --hit-line:#f0d98a;
+  --c4ta:#0f8a6b; --c5ta:#b7791f; --cdamas:#c2185b;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --navy:#eef3fb; --navy-2:#c9d6ec; --blue:#5b9bf5; --blue-soft:#17294a;
+  --ink:#e3e9f4; --muted:#97a6bf; --line:#233453; --bg:#0b1426; --bg-2:#0f1b33;
+  --deep:#06101f; --card:#111e37; --header:rgba(11,20,38,.94);
+  --hit:#3b3413; --hit-line:#6b5b1c;
+  --c4ta:#3ccaa0; --c5ta:#e3a94b; --cdamas:#f06a9e; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --navy:#eef3fb; --navy-2:#c9d6ec; --blue:#5b9bf5; --blue-soft:#17294a;
+  --ink:#e3e9f4; --muted:#97a6bf; --line:#233453; --bg:#0b1426; --bg-2:#0f1b33;
+  --deep:#06101f; --card:#111e37; --header:rgba(11,20,38,.94);
+  --hit:#3b3413; --hit-line:#6b5b1c;
+  --c4ta:#3ccaa0; --c5ta:#e3a94b; --cdamas:#f06a9e; color-scheme:dark}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(24px, env(safe-area-inset-left, 0px));padding-right:max(24px, env(safe-area-inset-right, 0px))}
+@media (max-width:600px){.wrap{padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top, 0px);z-index:60;background:var(--deep)}
+h1,h2,h3,h4{font-family:var(--cond);font-weight:800;text-transform:uppercase;line-height:.95;letter-spacing:-.005em}
+.kicker{display:inline-flex;align-items:center;gap:12px;font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--blue)}
+.kicker::before{content:"";width:28px;height:3px;background:var(--yellow)}
+
+/* ---------- Top bar ---------- */
+.topbar{background:var(--deep);color:#aebbd3;font-size:.74rem;letter-spacing:.06em}
+.topbar .wrap{display:flex;justify-content:space-between;gap:12px;padding-top:8px;padding-bottom:8px;flex-wrap:wrap}
+.topbar b{color:var(--yellow);font-weight:600}
+.topbar a{text-decoration:none}.topbar a:hover{color:#fff}
+
+/* ---------- Header ---------- */
+header.nav{position:sticky;top:env(safe-area-inset-top, 0px);z-index:50;background:var(--header);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none}
+.brand img{height:44px;width:auto;border-radius:6px;background:#fff}
+.brand .sep{width:1px;height:36px;background:var(--line)}
+.brand span{font-family:var(--cond);font-weight:800;font-size:1.45rem;color:var(--navy);line-height:.9;text-transform:uppercase}
+.brand small{display:block;font-family:Inter;font-size:.6rem;font-weight:700;letter-spacing:.22em;color:var(--blue);margin-top:4px}
+nav ul{list-style:none;display:flex;align-items:center;gap:2px}
+nav a{display:block;padding:10px 14px;font-family:var(--cond);font-size:1.05rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;color:var(--navy);position:relative}
+nav a:not(.cta)::after{content:"";position:absolute;left:14px;right:14px;bottom:4px;height:3px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .25s}
+nav a:not(.cta):hover::after{transform:scaleX(1)}
+nav a.cta{background:var(--yellow);color:var(--deep);border-radius:999px;padding:9px 22px;margin-left:10px}
+nav a.cta:hover{background:var(--blue);color:#fff}
+.burger{display:none;background:none;border:0;font-size:1.7rem;color:var(--navy);cursor:pointer;width:44px;height:44px}
+@media (max-width:960px){
+  .burger{display:block}
+  nav ul{display:none;position:absolute;left:0;right:0;top:76px;flex-direction:column;align-items:stretch;background:var(--card);padding:8px 16px 18px;border-bottom:1px solid var(--line)}
+  nav ul.open{display:flex}
+  nav a.cta{margin:8px 0 0;text-align:center}
+}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;color:#fff;background:var(--deep) url(img/canchas-aerea.jpg) center 35%/cover no-repeat;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,26,58,.97) 0%,rgba(10,26,58,.88) 42%,rgba(16,42,92,.55) 75%,rgba(22,96,214,.35) 100%)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:linear-gradient(90deg,var(--blue) 0 70%,var(--yellow) 70% 100%)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.3fr .7fr;gap:56px;align-items:center;padding-top:88px;padding-bottom:80px}
+.hero .kicker{color:var(--yellow)}
+.hero .kicker::before{background:var(--yellow)}
+.hero h1{font-size:clamp(3.4rem,9vw,7.6rem);margin:18px 0 0;letter-spacing:-.01em}
+.hero h1 .l2{display:block;font-style:italic;color:transparent;-webkit-text-stroke:2px #fff}
+.hero .sub{display:flex;align-items:center;gap:16px;margin:22px 0 26px;font-family:var(--cond);font-weight:700;font-size:clamp(1.2rem,2.6vw,1.7rem);text-transform:uppercase;letter-spacing:.08em}
+.hero .sub i{font-style:normal;color:var(--yellow)}
+.hero .sub span{white-space:nowrap}
+@media (max-width:560px){.hero .sub{flex-wrap:wrap;gap:4px 12px;padding-left:18px;border-left:6px solid var(--blue)}.hero .sub::before,.hero .sub>span:nth-child(2){display:none}.hero .sub>span{flex-basis:100%}}
+.hero .sub::before{content:"";width:6px;align-self:stretch;background:var(--blue)}
+.hero p.lead{max-width:540px;color:#c4cfe2;font-size:1.02rem}
+.cats{display:flex;flex-wrap:wrap;gap:0;margin:28px 0 34px;border:1px solid rgba(255,255,255,.25);width:max-content;max-width:100%}
+.cats span{padding:8px 18px;font-family:var(--cond);font-weight:700;font-size:1.05rem;letter-spacing:.08em;border-right:1px solid rgba(255,255,255,.25)}
+.cats span:last-child{border-right:0}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;border-radius:999px;font-family:var(--cond);font-weight:700;font-size:1.08rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;transition:background .2s,color .2s,transform .2s;border:2px solid transparent;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.btn-yellow{background:var(--yellow);color:var(--deep)}
+.btn-yellow:hover{background:#fff}
+.btn-line{border-color:rgba(255,255,255,.7);color:#fff}
+.btn-line:hover{background:#fff;color:var(--deep)}
+.btn .arr{transition:transform .2s}.btn:hover .arr{transform:translateX(4px)}
+
+.countdown{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(8px);padding:30px}
+.countdown h3{font-size:1.1rem;font-family:Inter;font-weight:700;letter-spacing:.22em;color:var(--yellow);margin-bottom:18px}
+.cd-grid{display:grid;grid-template-columns:repeat(4,1fr);text-align:center;border-top:1px solid rgba(255,255,255,.16);border-bottom:1px solid rgba(255,255,255,.16)}
+.cd-grid div{padding:16px 2px;border-right:1px solid rgba(255,255,255,.16)}
+.cd-grid div:last-child{border-right:0}
+.cd-grid b{display:block;font-family:var(--cond);font-weight:800;font-size:3.2rem;line-height:1;font-variant-numeric:tabular-nums}
+.cd-grid small{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:#9fb0cc}
+.cd-meta{margin-top:20px;display:grid;gap:12px;font-size:.88rem;color:#d3dcec}
+.cd-meta div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dashed rgba(255,255,255,.14);padding-bottom:10px}
+.cd-meta div:last-child{border-bottom:0;padding-bottom:0}
+.cd-meta span:first-child{color:#8ea1c2;text-transform:uppercase;font-size:.7rem;letter-spacing:.16em;font-weight:600;padding-top:3px}
+.cd-meta span:last-child{font-weight:600;text-align:right}
+@media (max-width:960px){.hero .wrap{grid-template-columns:1fr;min-height:auto;gap:40px}}
+
+/* ---------- Stats strip ---------- */
+.strip{background:var(--bg-2);border-bottom:1px solid var(--line)}
+.strip .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.strip div{padding:30px 10px;text-align:center;border-right:1px solid var(--line)}
+.strip div:last-child{border-right:0}
+.strip b{display:block;font-family:var(--cond);font-weight:800;font-size:3rem;line-height:1;color:var(--navy)}
+.strip small{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--blue)}
+@media (max-width:640px){.strip .wrap{grid-template-columns:repeat(2,1fr)}.strip div:nth-child(2){border-right:0}.strip div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+
+/* ---------- Sections ---------- */
+section{padding:104px 0}
+@media (max-width:640px){section{padding:72px 0}}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:48px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(2.6rem,5.6vw,4.4rem);color:var(--navy);margin-top:12px}
+.sec-head p{color:var(--muted);max-width:420px}
+
+/* Torneo */
+.about{display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:center}
+.about .pics{position:relative;padding:0 0 28px 28px}
+.about .pics::before{content:"";position:absolute;left:0;bottom:0;width:70%;height:70%;background:var(--blue)}
+.about .pics img{position:relative;aspect-ratio:4/3;object-fit:cover;width:100%}
+.about .pics .badge{position:absolute;right:-16px;top:28px;background:var(--deep);color:#fff;padding:18px 22px;border-left:5px solid var(--yellow)}
+.about .pics .badge b{font-family:var(--cond);font-weight:800;font-size:1.9rem;display:block;line-height:1}
+.about .pics .badge small{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#aebbd3}
+.about h2{font-size:clamp(2.6rem,5vw,4rem);color:var(--navy);margin:14px 0 22px}
+.about p{color:var(--muted);margin-bottom:14px}
+.about p b{color:var(--ink)}
+.checks{list-style:none;margin-top:26px;border-top:1px solid var(--line)}
+.checks li{display:flex;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);font-weight:600}
+.checks li span{font-family:var(--cond);font-weight:800;font-size:1.3rem;color:var(--blue);min-width:28px}
+@media (max-width:960px){.about{grid-template-columns:1fr;gap:48px}.about .pics .badge{right:0}}
+
+/* Información */
+.info{background:var(--deep);color:#fff;position:relative;overflow:hidden}
+.info::before{content:"";position:absolute;right:-180px;top:-180px;width:520px;height:520px;border-radius:50%;border:70px solid rgba(22,96,214,.18)}
+.info .sec-head h2{color:#fff}
+.info .sec-head p{color:#9fb0cc}
+.info .kicker{color:var(--yellow)}
+.cards{position:relative;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.14);border-left:1px solid rgba(255,255,255,.14)}
+.card{padding:36px 32px;border-right:1px solid rgba(255,255,255,.14);border-bottom:1px solid rgba(255,255,255,.14);transition:background .25s}
+.card:hover{background:rgba(22,96,214,.18)}
+.card .num{font-family:var(--cond);font-weight:700;font-size:.95rem;letter-spacing:.16em;color:var(--yellow)}
+.card h3{font-size:2rem;margin:10px 0 12px}
+.card p{color:#b5c2d9;font-size:.93rem}
+.card strong{color:#fff;font-weight:600}
+@media (max-width:960px){.cards{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.cards{grid-template-columns:1fr}.card{padding:28px 22px}}
+
+/* Premios */
+.prizes{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.prize{border:1px solid var(--line);background:var(--card);position:relative}
+.prize::before{content:"";position:absolute;left:0;top:0;right:0;height:6px;background:var(--blue)}
+.prize.alt::before{background:var(--yellow)}
+.prize header{padding:34px 34px 10px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.prize header h3{font-size:2.4rem;color:var(--navy)}
+.prize header span{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.prize .row{display:flex;justify-content:space-between;align-items:center;padding:22px 34px;border-top:1px solid var(--line)}
+.prize .row .lbl{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.prize .row .lbl em{display:block;font-style:normal;font-family:var(--cond);font-size:1.5rem;letter-spacing:.02em;color:var(--navy);text-transform:uppercase}
+.prize .row b{font-family:var(--cond);font-weight:800;font-size:3rem;color:var(--blue);line-height:1;font-variant-numeric:tabular-nums}
+.prize .row.first b{color:var(--navy)}
+.prize-note{margin-top:28px;color:var(--muted);font-size:.95rem;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.prize-note img{height:54px;width:auto}
+@media (max-width:760px){.prizes{grid-template-columns:1fr}.prize header,.prize .row{padding-left:22px;padding-right:22px}.prize .row b{font-size:2.4rem}}
+
+/* ---------- Cuadros ---------- */
+#cuadros{background:var(--bg-2)}
+.tabs{display:flex;border-bottom:2px solid var(--line);margin-bottom:28px;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:1 0 auto;background:none;border:0;border-bottom:4px solid transparent;margin-bottom:-2px;padding:14px 22px;font-family:var(--cond);font-weight:800;font-size:1.5rem;letter-spacing:.04em;color:var(--muted);cursor:pointer;text-transform:uppercase;transition:color .2s,border-color .2s}
+.tab small{font-family:Inter;font-size:.66rem;font-weight:600;letter-spacing:.1em;margin-left:6px;vertical-align:middle}
+.tab:hover{color:var(--navy)}
+.tab.active{color:var(--navy);border-bottom-color:var(--blue)}
+.draw-tools{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+.draw-tools .meta{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.draw-tools .meta b{color:var(--navy)}
+.tools-r{display:flex;gap:12px;align-items:center;flex-wrap:wrap;flex:0 1 auto}
+.search{position:relative;width:300px;max-width:100%}
+.search input{width:100%;padding:12px 16px 12px 42px;border:1px solid var(--line);border-radius:999px;font:inherit;font-size:.9rem;background:var(--card);color:var(--ink);outline:none;transition:border-color .2s}
+.search input:focus{border-color:var(--blue)}
+.search svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.dl{font-family:var(--cond);font-weight:700;font-size:1rem;letter-spacing:.08em;text-transform:uppercase;color:var(--navy);text-decoration:none;border:1.5px solid var(--navy);border-radius:999px;padding:9px 18px;white-space:nowrap}
+.dl:hover{background:var(--navy);color:var(--bg)}
+.groups{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,470px),1fr));gap:22px;align-items:start}
+.group{min-width:0;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:box-shadow .25s}
+.group:hover{box-shadow:0 18px 40px rgba(10,26,58,.08)}
+.group header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:20px 22px 18px;border-bottom:1px solid var(--line)}
+.group h4{font-size:2.1rem;color:var(--navy)}
+.st{font-size:.82rem;font-weight:700;white-space:nowrap}
+.st.s0{color:var(--muted)}.st.s1{color:var(--c5ta)}.st.s2{color:var(--blue)}
+.tbl-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+th{background:var(--bg-2);color:var(--muted);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;padding:11px 8px;text-align:center;border-bottom:1px solid var(--line)}
+th:first-child{text-align:left;padding-left:14px;width:54px}
+th.pl{text-align:left}
+td{padding:15px 8px;text-align:center;border-bottom:1px solid var(--line);white-space:nowrap;font-variant-numeric:tabular-nums}
+td.pos{text-align:left;padding-left:12px;border-left:4px solid transparent;font-family:var(--cond);font-weight:800;font-size:1.8rem;line-height:1;color:var(--navy)}
+td.pos.na{color:var(--muted);font-size:1.3rem}
+tr.q td.pos{border-left-color:var(--blue)}
+td.pl{text-align:left;font-weight:500;white-space:normal;min-width:140px;line-height:1.3}
+td.pl small{display:block;color:var(--muted);font-size:.8rem;font-weight:400;margin-top:2px}
+td.pg{font-weight:700;color:var(--navy)}
+tr.hit td{background:var(--hit)}
+.mlist{list-style:none;padding:14px 22px 18px}
+.mlist li{display:flex;justify-content:space-between;align-items:baseline;gap:6px 14px;padding:5px 0;font-size:.9rem;flex-wrap:wrap}
+.mlist b{font-weight:400}
+.mlist b.w{font-weight:700;color:var(--navy)}
+.mlist i{font-style:normal;color:var(--muted);font-size:.82rem;margin:0 2px}
+.mlist .sc{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.86rem;color:var(--muted);white-space:nowrap;margin-left:auto}
+.mlist .when{font-family:Inter;font-size:.74rem;font-weight:600;color:var(--blue)}
+.mlist .when.tbd{color:var(--muted)}
+@media (max-width:600px){
+  .group header{padding:16px 16px 14px}.group h4{font-size:1.8rem}
+  table{font-size:.84rem} th,td{padding-left:4px;padding-right:4px} th{font-size:.6rem;letter-spacing:.02em}
+  th:first-child{width:34px;padding-left:8px} td.pos{padding-left:6px;font-size:1.45rem}
+  td.pl{min-width:0}
+  .mlist{padding:12px 16px 16px}.mlist li{font-size:.84rem}
+}
+.empty{text-align:center;padding:48px;color:var(--muted);grid-column:1/-1;background:var(--card);border:1px solid var(--line)}
+.legend{margin-top:26px;font-size:.78rem;color:var(--muted)}
+
+/* ---------- Programación ---------- */
+.days{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.day{border:1.5px solid var(--line);background:var(--card);padding:12px 20px;cursor:pointer;text-align:left;font:inherit;transition:border-color .2s,background .2s}
+.day b{display:block;font-family:var(--cond);font-weight:800;font-size:1.5rem;color:var(--navy);text-transform:uppercase;line-height:1}
+.day small{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.day.active{border-color:var(--blue);background:var(--blue)}
+.day.active b{color:#fff}.day.active small{color:var(--yellow)}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1.5px solid var(--line);background:var(--card);border-radius:999px;padding:7px 16px;font-family:var(--cond);font-weight:700;font-size:1rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);cursor:pointer}
+.chip:hover{border-color:var(--navy);color:var(--navy)}
+.chip.active{background:var(--blue);border-color:var(--blue);color:#fff}
+.sched-tools{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin:6px 0 30px}
+.slot{display:grid;grid-template-columns:150px 1fr;border-top:1px solid var(--line)}
+.slot:last-child{border-bottom:1px solid var(--line)}
+.slot .time{padding:22px 0;position:relative}
+.slot .time b{display:block;font-family:var(--cond);font-weight:800;font-size:2.4rem;color:var(--navy);line-height:1;position:sticky;top:96px}
+.slot .time small{display:block;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--muted);margin-top:6px;position:sticky;top:136px}
+.slot .time .live{display:inline-block;margin-top:8px;background:var(--yellow);color:var(--deep);font-size:.6rem;font-weight:800;letter-spacing:.14em;padding:3px 8px;position:sticky;top:156px}
+.matches{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr));gap:1px;background:var(--line);border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.match{display:grid;grid-template-columns:62px 1fr auto;align-items:center;gap:14px;background:var(--card);padding:14px 18px 14px 0;transition:background .2s}
+.match:hover{background:var(--blue-soft)}
+.match.hit{background:var(--hit)}
+.court{align-self:stretch;display:flex;flex-direction:column;align-items:center;justify-content:center;border-right:1px solid var(--line)}
+.court small{font-size:.54rem;letter-spacing:.16em;font-weight:700;color:var(--muted)}
+.court b{font-family:var(--cond);font-weight:800;font-size:1.7rem;color:var(--blue);line-height:1}
+.players{display:grid;gap:2px;font-weight:600;font-size:.92rem;min-width:0}
+.players span{overflow:hidden;text-overflow:ellipsis}
+.players i{font-style:normal;font-family:var(--cond);font-weight:700;font-size:.8rem;letter-spacing:.14em;color:var(--muted)}
+.tag{font-family:var(--cond);font-weight:800;font-size:.95rem;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border:1.5px solid currentColor;white-space:nowrap}
+.tag.c2da{color:var(--navy)}.tag.c3ra{color:var(--blue)}.tag.c4ta{color:var(--c4ta)}.tag.c5ta{color:var(--c5ta)}.tag.cdamas{color:var(--cdamas)}
+.sched-empty{padding:40px;text-align:center;color:var(--muted);border:1px solid var(--line);background:var(--card)}
+@media (max-width:700px){.slot{grid-template-columns:1fr}.slot .time{padding:18px 0 12px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}.slot .time b,.slot .time small,.slot .time .live{position:static;margin:0}.matches{border-top:1px solid var(--line)}}
+
+/* Formato */
+.rules{display:grid;grid-template-columns:1.1fr .9fr;gap:72px;align-items:start}
+.timeline{list-style:none;counter-reset:s}
+.timeline li{display:grid;grid-template-columns:90px 1fr;gap:20px;padding:24px 0;border-top:1px solid var(--line)}
+.timeline li:last-child{border-bottom:1px solid var(--line)}
+.timeline .when{font-family:var(--cond);font-weight:800;font-size:1.5rem;color:var(--blue);line-height:1;text-transform:uppercase}
+.timeline .when small{display:block;font-family:Inter;font-size:.62rem;letter-spacing:.16em;color:var(--muted);font-weight:600;margin-top:6px}
+.timeline h3{font-size:1.7rem;color:var(--navy);margin-bottom:6px}
+.timeline p{color:var(--muted);font-size:.95rem}
+.flyer{width:100%;border:1px solid var(--line);box-shadow:0 30px 60px rgba(10,26,58,.15)}
+@media (max-width:960px){.rules{grid-template-columns:1fr;gap:48px}}
+@media (max-width:480px){.timeline li{grid-template-columns:1fr;gap:8px}}
+
+/* Galería */
+.gallery{display:grid;grid-template-columns:2fr 1fr 1fr;grid-auto-rows:240px;gap:12px}
+.gallery figure{position:relative;overflow:hidden;cursor:zoom-in;background:var(--deep)}
+.gallery img{width:100%;height:100%;object-fit:cover;transition:transform .6s,opacity .3s}
+.gallery figure:hover img{transform:scale(1.04);opacity:.85}
+.gallery figcaption{position:absolute;left:0;bottom:0;padding:10px 16px;background:var(--deep);color:#fff;font-family:var(--cond);font-weight:700;font-size:1rem;letter-spacing:.08em;text-transform:uppercase;border-left:4px solid var(--yellow)}
+.g1{grid-row:span 2}.g2{grid-column:span 2}
+@media (max-width:760px){.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:170px}.g1,.g2{grid-column:span 2}}
+.lightbox{position:fixed;inset:0;background:rgba(6,14,32,.94);display:none;align-items:center;justify-content:center;z-index:100;padding:20px;cursor:zoom-out}
+.lightbox.open{display:flex}
+.lightbox img{max-height:90vh}
+
+/* Aliados */
+.sponsors{padding:72px 0;border-top:1px solid var(--line)}
+.sp-row{display:grid;grid-template-columns:auto 1fr 1fr;align-items:center;gap:0;border:1px solid var(--line)}
+.sp-row .t{padding:28px 36px;font-family:var(--cond);font-weight:800;font-size:2rem;text-transform:uppercase;color:var(--navy);line-height:1;border-right:1px solid var(--line)}
+.sp-row .t small{display:block;font-family:Inter;font-size:.64rem;letter-spacing:.2em;font-weight:700;color:var(--blue);margin-bottom:8px}
+.sp{background:#fff;display:flex;flex-direction:column;align-items:center;gap:8px;padding:24px;border-right:1px solid var(--line)}
+.sp:last-child{border-right:0}
+.sp img{height:120px;width:auto;object-fit:contain}
+.sp span{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:700}
+@media (max-width:760px){.sp-row{grid-template-columns:1fr 1fr}.sp-row .t{grid-column:span 2;border-right:0;border-bottom:1px solid var(--line);text-align:center}.sp img{height:90px}}
+
+/* CTA */
+.cta-band{background:var(--blue);color:#fff;position:relative;overflow:hidden}
+.cta-band::after{content:"";position:absolute;right:0;top:0;bottom:0;width:28%;background:var(--yellow);clip-path:polygon(30% 0,100% 0,100% 100%,0 100%)}
+.cta-band .wrap{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;padding-top:64px;padding-bottom:64px}
+.cta-band h2{font-size:clamp(2.6rem,6vw,4.6rem)}
+.cta-band p{color:#dbe7fb;margin-top:8px}
+.phones{display:flex;gap:12px;flex-wrap:wrap}
+.cta-band .btn-yellow{background:var(--deep);color:#fff}
+.cta-band .btn-yellow:hover{background:#fff;color:var(--deep)}
+.cta-band .btn-line{border-color:#fff;color:#0a1a3a;background:#fff}
+.cta-band .btn-line:hover{background:var(--deep);border-color:var(--deep);color:#fff}
+@media (max-width:760px){.cta-band::after{width:100%;top:auto;height:90px;clip-path:polygon(0 40%,100% 0,100% 100%,0 100%)}.cta-band .wrap{padding-bottom:110px}}
+
+/* Footer */
+footer{background:var(--deep);color:#8ea1c2;padding:64px 0 28px;font-size:.88rem}
+.foot{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px}
+footer h4{font-size:1.5rem;color:#fff;margin-bottom:14px}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--yellow)}
+.copy{border-top:1px solid rgba(255,255,255,.1);margin-top:44px;padding-top:20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase}
+@media (max-width:760px){.foot{grid-template-columns:1fr}}
+
+/* Las animaciones solo ocultan contenido si JavaScript está activo */
+/* Todo está visible desde el inicio; solo hay un leve desplazamiento al entrar en pantalla */
+.js .reveal{transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .reveal:not(.in){transform:translateY(14px)}
+.nojs-note{background:var(--hit);border:1px solid var(--hit-line);padding:16px 20px;margin-bottom:24px;font-size:.92rem}
+.nojs-note a{color:var(--blue);font-weight:700}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span><b>●</b>&nbsp; Complejo de Raquetas &nbsp;·&nbsp; 28 nov – 12 dic 2026</span>
+    <span><a href="https://wa.me/573127179621">312 717 9621</a> &nbsp;·&nbsp; <a href="https://wa.me/573014588853">301 458 8853</a></span>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#inicio">
+      <img src="img/logo-tenis-bolivar.jpg" alt="Tenis Bolívar">
+      <i class="sep"></i>
+      <span>Copa Gigante del Hogar<small>RANKING CUP 2026</small></span>
+    </a>
+    <button class="burger" aria-label="Abrir menú" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    <nav>
+      <ul id="menu">
+        <li><a href="#torneo">El torneo</a></li>
+        <li><a href="#informacion">Información</a></li>
+        <li><a href="#premios">Premios</a></li>
+        <li><a href="#programacion">Programación</a></li>
+        <li><a href="#cuadros">Cuadros</a></li>
+        <li><a href="#galeria">Escenario</a></li>
+        <li><a class="cta" href="#inscripcion">Inscríbete</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio" style="padding:0">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Torneo Departamental · Ranking Cup 2026</span>
+      <h1>Copa Gigante<span class="l2">del Hogar</span></h1>
+      <div class="sub"><span>28 Nov <i>—</i> 12 Dic</span><span>·</span><span>Complejo de Raquetas</span></div>
+      <p class="lead">El cierre de temporada de Tenis Bolívar. Fase de grupos en round robin y eliminación directa en las finales.</p>
+      <div class="cats"><span>2da</span><span>3ra</span><span>4ta</span><span>5ta</span><span>Damas</span></div>
+      <div class="btns">
+        <a class="btn btn-yellow" href="#cuadros">Ver cuadros <span class="arr">→</span></a>
+        <a class="btn btn-line" href="#inscripcion">Inscríbete</a>
+      </div>
+    </div>
+    <aside class="countdown">
+      <h3 id="cd-title">ARRANCA EL TORNEO EN</h3>
+      <div class="cd-grid">
+        <div><b id="cd-d">0</b><small>Días</small></div>
+        <div><b id="cd-h">0</b><small>Horas</small></div>
+        <div><b id="cd-m">0</b><small>Min</small></div>
+        <div><b id="cd-s">0</b><small>Seg</small></div>
+      </div>
+      <div class="cd-meta">
+        <div><span>Inicio</span><span>Sábado 28 de noviembre</span></div>
+        <div><span>Finales</span><span>Hasta el 12 de diciembre</span></div>
+        <div><span>Sede</span><span>Complejo de Raquetas</span></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <div><b>5</b><small>Categorías</small></div>
+    <div><b id="st-players">0</b><small>Jugadores</small></div>
+    <div><b id="st-groups">0</b><small>Grupos</small></div>
+    <div><b>$4.8M</b><small>En premios</small></div>
+  </div>
+</div>
+
+<!-- TORNEO -->
+<section id="torneo">
+  <div class="wrap about">
+    <div class="pics reveal">
+      <img src="img/complejo.webp" alt="Sede del Complejo de Raquetas">
+      <div class="badge"><small>Sede oficial</small><b>Complejo de Raquetas</b></div>
+    </div>
+    <div class="reveal">
+      <span class="kicker">El torneo</span>
+      <h2>Cinco categorías,<br>un solo campeonato</h2>
+      <p>El Torneo Departamental <b>Ranking Cup 2026</b> reúne a los jugadores de la región en 2da, 3ra, 4ta, 5ta y Damas. Organiza Tenis Bolívar con el patrocinio de <b>El Gigante del Hogar</b>.</p>
+      <p>Se juega bajo el reglamento de puntuación y desempate de la Federación Colombiana de Tenis (FCT).</p>
+      <ul class="checks">
+        <li><span>01</span>Round robin en 1ra fase y eliminación directa en finales</li>
+        <li><span>02</span>Partidos al mejor de 2 sets sin ventaja</li>
+        <li><span>03</span>Super tie-break en caso de igualdad</li>
+        <li><span>04</span>Trofeos para campeones y finalistas</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- INFORMACIÓN -->
+<section class="info" id="informacion">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="kicker">Información general</span><h2>Todo lo que<br>debes saber</h2></div>
+      <p>Fechas, valores, reglamento y sistema de juego del torneo.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal"><div class="num">01</div><h3>Fechas</h3><p>Del <strong>28 de noviembre</strong> al <strong>12 de diciembre</strong> de 2026. Sorteo: 25 de noviembre.</p></div>
+      <div class="card reveal"><div class="num">02</div><h3>Inscripción</h3><p><strong>2da y 3ra:</strong> $150.000<br><strong>4ta, 5ta y Damas:</strong> $120.000</p></div>
+      <div class="card reveal"><div class="num">03</div><h3>Sistema de juego</h3><p>Round robin en la 1ra fase y eliminación directa en finales. Al mejor de 2 sets (sin ventaja), con super tie-break en caso de igualdad.</p></div>
+      <div class="card reveal"><div class="num">04</div><h3>Reglamentación</h3><p>Reglamento de puntuación y desempate de la <strong>FCT</strong>.</p></div>
+      <div class="card reveal"><div class="num">05</div><h3>Trofeos</h3><p>Para campeones y finalistas en cada categoría, junto a los premios del patrocinador <strong>El Gigante del Hogar</strong>.</p></div>
+      <div class="card reveal"><div class="num">06</div><h3>Caddies</h3><p>Por cuenta de los jugadores.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PREMIOS -->
+<section id="premios">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="kicker">Bolsa de premios</span><h2>Premios en efectivo</h2></div>
+      <p>Además de trofeos y premios del patrocinador para campeones y finalistas.</p>
+    </div>
+    <div class="prizes">
+      <div class="prize reveal">
+        <header><h3>2da y 3ra</h3><span>Inscripción $150 mil</span></header>
+        <div class="row first"><span class="lbl">Premio<em>Campeón</em></span><b>$800.000</b></div>
+        <div class="row"><span class="lbl">Premio<em>Finalista</em></span><b>$400.000</b></div>
+      </div>
+      <div class="prize alt reveal">
+        <header><h3>4ta · 5ta · Damas</h3><span>Inscripción $120 mil</span></header>
+        <div class="row first"><span class="lbl">Premio<em>Campeón</em></span><b>$500.000</b></div>
+        <div class="row"><span class="lbl">Premio<em>Finalista</em></span><b>$300.000</b></div>
+      </div>
+    </div>
+    <p class="prize-note"><img src="img/logo-gigante.jpg" alt="El Gigante del Hogar">Premios adicionales del patrocinador oficial, El Gigante del Hogar.</p>
+  </div>
+</section>
+
+<!-- PROGRAMACIÓN -->
+<section id="programacion">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="kicker">Orden de juego</span><h2>Programación</h2></div>
+      <p>Horarios y canchas de cada partido. Busca tu nombre o filtra por categoría.</p>
+    </div>
+    <div class="days" id="days"></div>
+    <div class="sched-tools">
+      <div class="chips" id="chips"></div>
+      <div class="tools-r">
+        <label class="search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="qs" type="search" placeholder="Buscar jugador" aria-label="Buscar jugador en la programación">
+        </label>
+        <a class="dl" id="dls" href="#" target="_blank" rel="noopener">PDF ↓</a>
+      </div>
+    </div>
+    <noscript><div class="nojs-note">Este visor no permite mostrar la programación interactiva. Abre la página en Chrome, Safari o Edge, o descarga la <a href="cuadros/programacion-sabado-28.pdf">programación del sábado 28 en PDF</a>.</div></noscript>
+    <div id="sched"></div>
+  </div>
+</section>
+
+<!-- CUADROS -->
+<section id="cuadros">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="kicker">Fase de grupos</span><h2>Cuadros clasificatorios</h2></div>
+      <p>Round robin por grupos. Fecha de inicio: sábado 28 de noviembre.</p>
+    </div>
+    <div class="tabs" id="tabs"></div>
+    <div class="draw-tools">
+      <div class="meta" id="meta"></div>
+      <div class="tools-r">
+        <label class="search">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="q" type="search" placeholder="Buscar jugador" aria-label="Buscar jugador">
+        </label>
+        <a class="dl" id="dl" href="#" target="_blank" rel="noopener">PDF ↓</a>
+      </div>
+    </div>
+    <noscript><div class="nojs-note">Este visor no permite mostrar los cuadros interactivos. Abre la página en Chrome, Safari o Edge, o descarga los cuadros en PDF: <a href="cuadros/2da.pdf">2da</a> · <a href="cuadros/3ra.pdf">3ra</a> · <a href="cuadros/4ta.pdf">4ta</a> · <a href="cuadros/5ta.pdf">5ta</a> · <a href="cuadros/damas.pdf">Damas</a>.</div></noscript>
+    <div class="groups" id="groups"></div>
+    <p class="legend"><b>PJ</b> partidos jugados · <b>PG</b> partidos ganados · <b>Sets</b> y <b>Games</b> a favor–en contra (desempate FCT) · El tercer set es super tie-break [10].</p>
+  </div>
+</section>
+
+<!-- FORMATO -->
+<section>
+  <div class="wrap rules">
+    <div>
+      <div class="sec-head" style="margin-bottom:28px">
+        <div><span class="kicker">Formato</span><h2>Cómo se juega</h2></div>
+      </div>
+      <ul class="timeline">
+        <li class="reveal"><div class="when">25 Nov<small>Sorteo</small></div><div><h3>Sorteo</h3><p>Conformación de los grupos de cada categoría.</p></div></li>
+        <li class="reveal"><div class="when">28 Nov<small>Inicio</small></div><div><h3>Fase de grupos</h3><p>Todos contra todos dentro de cada grupo. Partidos al mejor de 2 sets sin ventaja; super tie-break si quedan 1-1.</p></div></li>
+        <li class="reveal"><div class="when">Grupos<small>Cierre</small></div><div><h3>Clasificación</h3><p>Posiciones por partidos ganados; desempate por % de sets y % de games según reglamento FCT.</p></div></li>
+        <li class="reveal"><div class="when">12 Dic<small>Finales</small></div><div><h3>Eliminación directa</h3><p>Llaves hasta definir campeones y finalistas de cada categoría.</p></div></li>
+      </ul>
+    </div>
+    <img class="flyer reveal" src="img/flyer-info.jpg" alt="Ficha técnica del torneo">
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section id="galeria" style="background:var(--bg-2)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="kicker">Escenario</span><h2>Complejo de Raquetas</h2></div>
+      <p>Canchas duras rodeadas de naturaleza, sede de la Copa Gigante del Hogar.</p>
+    </div>
+    <div class="gallery">
+      <figure class="g1"><img src="img/canchas-aerea.jpg" alt="Vista aérea de las canchas"><figcaption>Vista aérea</figcaption></figure>
+      <figure class="g2"><img src="img/complejo.webp" alt="Edificio del complejo"><figcaption>Sede del complejo</figcaption></figure>
+      <figure><img src="img/flyer-principal.jpg" alt="Afiche oficial" style="object-position:top"><figcaption>Afiche oficial</figcaption></figure>
+      <figure><img src="img/flyer-info.jpg" alt="Ficha técnica" style="object-position:top"><figcaption>Ficha técnica</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ALIADOS -->
+<div class="sponsors">
+  <div class="wrap">
+    <div class="sp-row">
+      <div class="t"><small>Aliados</small>Patrocina<br>y organiza</div>
+      <div class="sp"><img src="img/logo-gigante.jpg" alt="El Gigante del Hogar"><span>Patrocinador oficial</span></div>
+      <div class="sp"><img src="img/logo-tenis-bolivar.jpg" alt="Tenis Bolívar" style="height:90px"><span>Organiza</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- INSCRIPCIÓN -->
+<div class="cta-band" id="inscripcion">
+  <div class="wrap">
+    <div>
+      <h2>Inscríbete ahora</h2>
+      <p>2da y 3ra: $150 mil · 4ta, 5ta y Damas: $120 mil</p>
+    </div>
+    <div class="phones">
+      <a class="btn btn-yellow" href="https://wa.me/573127179621" target="_blank" rel="noopener">WhatsApp 312 717 9621</a>
+      <a class="btn btn-line" href="https://wa.me/573014588853" target="_blank" rel="noopener">301 458 8853</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <h4>Copa Gigante del Hogar</h4>
+        <p>Torneo Departamental Ranking Cup 2026. Organiza Tenis Bolívar · Patrocina El Gigante del Hogar.</p>
+      </div>
+      <div>
+        <h4>Navegación</h4>
+        <ul><li><a href="#torneo">El torneo</a></li><li><a href="#informacion">Información</a></li><li><a href="#premios">Premios</a></li><li><a href="#cuadros">Cuadros</a></li></ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul><li>Complejo de Raquetas</li><li><a href="tel:+573127179621">312 717 9621</a></li><li><a href="tel:+573014588853">301 458 8853</a></li></ul>
+      </div>
+    </div>
+    <div class="copy"><span>© 2026 Tenis Bolívar</span><span>Copa Gigante del Hogar · Ranking Cup 2026</span></div>
+  </div>
+</footer>
+
+<div class="lightbox" id="lb" onclick="this.classList.remove('open')"><img id="lb-img" alt=""></div>
+
+<script>
+/* ======= DATOS DE LOS CUADROS =======
+   Para cargar resultados, usa RESULTADOS (más abajo). PG, %Sets, %Games y posición se calculan solos. */
+const CUADROS = {
+  "2da": { pdf:"cuadros/2da.pdf", grupos:[
+    ["FELIPE CAMACHO","LUIS SARMIENTO","JORGE RODRIGUEZ"],
+    ["SARA LÓPEZ","ERIC GÓMEZ","MARCO SANFELIU"],
+    ["FABIO ZAPATA","NICOLÁS GÓMEZ","ARNALDO GÉLIZ",""],
+    ["MAGIN ORTIGA","DARIO ALCALÁ","GERARDO RUMIÉ"]
+  ]},
+  "3ra": { pdf:"cuadros/3ra.pdf", grupos:[
+    ["ORLANDO MARTÍNEZ","DANIEL ORTEGA","JOSÉ CARRASCAL"],
+    ["DANIEL ZARDIBIA","OSCAR CHACÓN","JUAN ALVAREZ"],
+    ["JUAN CARLOS CIFUENTES","WILLIAM GAMBOA BUITRAGO","JUAN CARLOS ARANGO"],
+    ["ALEJANDRO MOUTHON","HERNANDO VEGA","JUAN DAVID ARIAS"],
+    ["CAMILO SOTO","MARÍA JOSÉ BAYONA","LEONARDO VERA"],
+    ["ALEJANDRO PAREJA","NICOL GONZALEZ","ERNESTO BOTERO"],
+    ["JUAN DANIEL TABOADA","ANDRÉS ROJAS","JUAN JOSÉ MARTINEZ"],
+    ["LUIS GÓMEZ","SERGIO DELL'ORO","PEDRO GOENAGA"],
+    ["JUAN SEBASTIÁN CIFUENTES","MARCELA TORRES","REYNALDO AHUMADA"]
+  ]},
+  "4ta": { pdf:"cuadros/4ta.pdf", grupos:[
+    ["CAMILO SALADÉN","MARTÍN TARAZONA","NICOLÁS ARRAZOLA"],
+    ["ANDRÉS CIFUENTES","ANDRÉS ROMÁN","ALDAIR TORRENEGRA"],
+    ["JUAN PABLO PAREJA","DANIEL VEGA","JORGE BORRERO"],
+    ["MAURICIO LOZANO","JUAN CAMILO QUIJANO","MANUEL DÍAZ"],
+    ["BYRON MIRANDA","SANTIAGO DUSSAN","ADAN HERRERA"],
+    ["LEONARDO VERA","JAVIER HURTADO","JUAN DIEGO VELASQUEZ"],
+    ["BARTOLOMEO ROMANO","CARLSON HERNANDEZ","JEFFRY BERDUGO"],
+    ["JUAN CARLOS ARANGO","CARLOS SANJUAN","BRANDO POLO"],
+    ["ANDRÉS SALCEDO","FRANCISCO VERA","GABRIEL AGUILAR"],
+    ["EMMANUEL BAYONA","ANDRÉS CABEZAS","RAFAEL NOYA"],
+    ["JAN RODRÍGUEZ","JOSÉ BERMEJO","GIUSEPPE ABBRESCIA"],
+    ["FABIO ARANDA","GINA PIÑERES","AMAURY BLANDON"],
+    ["GIOVANNI COLETTA","MARÍA ABONDANO","GERSON URIBE"],
+    ["GUSTAVO GIMÉNEZ","DANIEL SUARES","SEBASTIAN HERRERA"],
+    ["JORGE DUQUE","TITO BALLESTAS","MAURICIO GIL"],
+    ["ADRIANO GUETTE","GABRIELA GAONA","IVÁN VELASQUEZ"]
+  ]},
+  "5ta": { pdf:"cuadros/5ta.pdf", grupos:[
+    ["EMILIO ABONDANO","JOSÉ GREGORIO HERNÁNDEZ","DANIELA VARELA"],
+    ["ALDAIR TORRENEGRA","JOSÉ VICENTE GUZMÁN","DANIEL CASTAÑO"],
+    ["RODRIGO ENSUNCHO","JOSE MANSEBO","MATEO GIMÉNEZ"],
+    ["ENRIQUE RIVERA","AMAURY GUZMÁN","JUAN DE AVILA"],
+    ["JOSÉ BERMEJO","NÉSTOR CUELLO","CARLOS BATISTA"],
+    ["JUAN VALLE","ANDRÉS FAJARDO","JUAN FELIPE ARANGO"],
+    ["GABRIEL ENSUNCHO","YEISSON CASTRO","JUAN FELIPE ROMÁN","PABLO MARTINEZ"],
+    ["LORENZO ROMANO","JOSÉ PAJARO","OSMEL FARAC"],
+    ["SIMÓN GIMÉNEZ","SARA HENAO BUELVAS","DUVÁN CARDONA"],
+    ["JOSUÉ ROCA","PABLO BERNAL","ROY PÉREZ"],
+    ["BRANDON AVELLA","JUAN PITA","SERGIO BARRIOS"],
+    ["CRISTIAN FLÓREZ","GUSTAVO POTOSÍ","DAVID MARTÍNEZ"],
+    ["HÉCTOR ROMERO","RICHARD RAMÓN","SAMUEL PLAZAS"],
+    ["JOSUÉ VARGAS","VIOLETA SILVA","WILSON BORNACHERA"]
+  ]},
+  "Damas": { pdf:"cuadros/damas.pdf", grupos:[
+    ["LAURA CABRERA DÍAZ","SHAIRA GONZÁLEZ","FABIANA MEDINA LAVALLE"],
+    ["CAROLINA ZAMBRANO","LAURA CHALA","ANGELINA CHEDRAUY"],
+    ["LUCIANA PEREIRA","KARINA PATIÑO","ADRIANA NIÑO"],
+    ["NELLYMAR MANSEBO","SHADIA QUEVEDO","STELLA DE AVILA","ANA MURGAS ACEVEDO"],
+    ["KAROLL MARTINEZ","ALEJANDRA BLANCO","MARÍA JOSÉ CABALLERO"],
+    ["ANGÉLICA MARTÍNEZ","ARI SOLANO","DANIELA LÓPEZ"],
+    ["EVELYN PÉREZ","MARÍA JOSÉ PRADO","BREINY BOTET"]
+  ]}
+};
+/* Resultados por categoría y grupo (grupo desde 1). La clave "1-2" es jugador 1 vs jugador 2 del sorteo,
+   y el marcador va desde la óptica del primero. Tercer set = super tie-break. W.O.: "WO 1" o "WO 2" (quién gana).
+   Ejemplo:
+   RESULTADOS["2da"] = { 1: { "1-2":"4-2 2-4 10-7", "1-3":"6-2 6-1", "2-3":"WO 1" } };
+   Academia opcional en los cuadros: "FELIPE CAMACHO | Club X" */
+const RESULTADOS = {};
+
+const cap = s => s.toLowerCase().replace(/(^|[\s'’-])(\p{L})/gu,(m,a,b)=>a+b.toUpperCase());
+const norm = s => s.normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase();
+const parse = score => score.trim().split(/\s+/).map(s=>s.split("-").map(Number));
+
+/* Cuántos jugadores por grupo pasan a la fase final (se marcan con la barra azul) */
+const CLASIFICAN = 1;
+const nameOf = s => s.split("|")[0].trim();
+const acadOf = s => (s.split("|")[1]||"").trim();
+const ratio=(w,l)=>w/((w+l)||1);
+/* Si el PDF va incrustado en el archivo, se descarga en lugar de abrirse en otra pestaña */
+function setPdf(a,href,name){
+  a.href=href;
+  if(href.startsWith("data:")){a.download=name;a.removeAttribute("target");}
+  else{a.removeAttribute("download");a.target="_blank";}
+}
+
+function parseRes(v){
+  const t=v.replace(/\./g,"").trim();
+  const wo=t.match(/^wo\s*([12])$/i);              // "WO 1" o "WO 2": gana por W.O. el jugador 1 o 2 del partido
+  if(wo) return {wo:true,winner:+wo[1]-1};
+  const sets=t.split(/\s+/).map(s=>s.replace(/[\[\]]/g,"").split("-").map(Number));
+  let a=0,b=0; sets.forEach(([x,y])=>x>y?a++:b++);
+  return {sets,a,b,winner:a>b?0:1};
+}
+function groupData(players,res){
+  const n=players.length, st=players.map((p,i)=>({i,p,pj:0,pg:0,sw:0,sl:0,gw:0,gl:0})), matches=[];
+  for(let i=0;i<n;i++)for(let j=i+1;j<n;j++){
+    if(!players[i]||!players[j]) continue;
+    const raw=res&&res[`${i+1}-${j+1}`], m={i,j};
+    if(raw){
+      const r=parseRes(raw); m.r=r;
+      st[i].pj++; st[j].pj++; (r.winner===0?st[i]:st[j]).pg++;
+      if(!r.wo){
+        st[i].sw+=r.a; st[i].sl+=r.b; st[j].sw+=r.b; st[j].sl+=r.a;
+        r.sets.forEach(([x,y],k)=>{ if(k===2) return; st[i].gw+=x; st[i].gl+=y; st[j].gw+=y; st[j].gl+=x; });
+      }
+    }
+    matches.push(m);
+  }
+  return {st,matches};
+}
+function findSched(cat,a,b){
+  const na=norm(a), nb=norm(b), same=(x,y)=>x.startsWith(y)||y.startsWith(x);
+  for(const d of PROGRAMACION) for(const t of d.turnos) for(const p of t.partidos){
+    if(p[3].toLowerCase()!==cat.toLowerCase()) continue;
+    const x=norm(p[1]), y=norm(p[2]);
+    if((same(x,na)&&same(y,nb))||(same(x,nb)&&same(y,na))) return `${d.dia} · ${t.hora} · Cancha ${p[0]}`;
+  }
+  return "";
+}
+
+let current="2da";
+const tabsEl=document.getElementById("tabs"), groupsEl=document.getElementById("groups"), q=document.getElementById("q");
+
+function render(){
+  const cat=CUADROS[current], term=norm(q.value.trim());
+  const realPlayers=cat.grupos.flat().filter(Boolean).length;
+  document.getElementById("meta").innerHTML=`<b>${current}</b> &nbsp;·&nbsp; <b>${cat.grupos.length}</b> grupos &nbsp;·&nbsp; <b>${realPlayers}</b> jugadores`;
+  setPdf(document.getElementById("dl"),cat.pdf,`cuadro-${current}.pdf`);
+  let html="";
+  cat.grupos.forEach((g,gi)=>{
+    if(term && !g.some(p=>p&&norm(p).includes(term))) return;
+    const {st,matches}=groupData(g,(RESULTADOS[current]||{})[gi+1]);
+    const played=matches.filter(m=>m.r).length, total=matches.length;
+    const [stTxt,stCls]=!played?["Por jugar","s0"]:played<total?["En juego","s1"]:["Grupo terminado","s2"];
+    const rows=st.filter(s=>s.p);
+    if(played) rows.sort((a,b)=>b.pg-a.pg||ratio(b.sw,b.sl)-ratio(a.sw,a.sl)||ratio(b.gw,b.gl)-ratio(a.gw,a.gl)||a.i-b.i);
+    html+=`<article class="group"><header><h4>Grupo ${gi+1}</h4><span class="st ${stCls}">${stTxt}</span></header>
+      <div class="tbl-wrap"><table><thead><tr><th>Pos</th><th class="pl">Jugador</th><th>PJ</th><th>PG</th><th>Sets</th><th>Games</th></tr></thead><tbody>`;
+    rows.forEach((s,k)=>{
+      const hit=term&&norm(s.p).includes(term), q=played&&k<CLASIFICAN, ac=acadOf(s.p);
+      html+=`<tr class="${hit?"hit":""}${q?" q":""}"><td class="pos${played?"":" na"}">${played?k+1:"–"}</td><td class="pl">${cap(nameOf(s.p))}${ac?`<small>${ac}</small>`:""}</td><td>${s.pj}</td><td class="pg">${s.pg}</td><td>${s.sw}-${s.sl}</td><td>${s.gw}-${s.gl}</td></tr>`;
+    });
+    html+=`</tbody></table></div><ul class="mlist">`;
+    matches.forEach(m=>{
+      const A=nameOf(g[m.i]), B=nameOf(g[m.j]); let sc, w=-1;
+      if(m.r){ w=m.r.winner; sc=m.r.wo?"W.O.":m.r.sets.map(([x,y],k)=>k===2?`[${x}-${y}]`:`${x}-${y}`).join(" "); }
+      else { const s=findSched(current,A,B); sc=s?`<span class="when">${s}</span>`:`<span class="when tbd">Por programar</span>`; }
+      html+=`<li><span><b class="${w===0?"w":""}">${cap(A)}</b> <i>vs</i> <b class="${w===1?"w":""}">${cap(B)}</b></span><span class="sc">${sc}</span></li>`;
+    });
+    html+=`</ul></article>`;
+  });
+  groupsEl.innerHTML=html||`<div class="empty">No se encontró “${q.value}” en ${current.toUpperCase()}.</div>`;
+}
+function setTab(k){current=k;document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active",t.dataset.k===k));}
+Object.keys(CUADROS).forEach(k=>{
+  const b=document.createElement("button");
+  b.className="tab"+(k===current?" active":""); b.dataset.k=k;
+  b.innerHTML=`${k}<small>${CUADROS[k].grupos.length} grupos</small>`;
+  b.onclick=()=>{setTab(k);render();};
+  tabsEl.appendChild(b);
+});
+q.addEventListener("input",()=>{
+  const term=norm(q.value.trim());
+  if(term.length>2 && !CUADROS[current].grupos.flat().some(p=>p&&norm(p).includes(term))){
+    const k=Object.keys(CUADROS).find(c=>CUADROS[c].grupos.flat().some(p=>p&&norm(p).includes(term)));
+    if(k) setTab(k);
+  }
+  render();
+});
+
+/* ======= PROGRAMACIÓN =======
+   Para agregar un día nuevo, copia un bloque { dia, fecha, pdf, turnos } y llénalo.
+   Cada partido: [cancha, jugador 1, jugador 2, categoría] */
+const PROGRAMACION = [
+  { dia:"Sábado 28", fecha:"2026-11-28", pdf:"cuadros/programacion-sabado-28.pdf", turnos:[
+    { hora:"6:00 a.m.", h:6, partidos:[
+      [1,"CARLSON HERNANDEZ","JEFFRY BERDUGO","4ta"],
+      [2,"LEONARDO VERA","CAMILO SOTO","3ra"],
+      [3,"ERIC GÓMEZ","MARCO SANFELIU","2da"],
+      [4,"FABIO ZAPATA","NICOLÁS GÓMEZ","2da"],
+      [5,"GERARDO RUMIÉ","DARIO ALCALÁ","2da"],
+      [6,"JUAN DANIEL TABOADA","ANDRÉS ROJAS","3ra"],
+      [7,"DANIEL ZARDIBIA","OSCAR CHACÓN","3ra"],
+      [8,"GINA PIÑERES","FABIO ARANDA","4ta"]]},
+    { hora:"7:30 a.m.", h:7.5, partidos:[
+      [2,"MAURICIO LOZANO","JUAN CAMILO QUIJANO","4ta"],
+      [3,"ALDAIR TORRENEGRA","JOSÉ VICENTE GUZMÁN","5ta"],
+      [4,"LUIS SARMIENTO","JORGE RODRÍGUEZ","2da"],
+      [5,"BYRON MIRANDA","ADÁN HERRERA","4ta"],
+      [6,"DANIELA VARELA","JOSÉ GREGORIO HERNÁNDEZ","5ta"]]},
+    { hora:"9:00 a.m.", h:9, partidos:[
+      [1,"JOSUÉ VARGAS","VIOLETA SILVA","5ta"],
+      [2,"JUAN PITA","SERGIO BARRIOS","5ta"],
+      [3,"RICHARD RAMÓN","SAMUEL PLAZAS","5ta"],
+      [4,"JUAN CARLOS CIFUENTES","JUAN CARLOS ARANGO","3ra"],
+      [5,"ANDRÉS FAJARDO","JUAN FELIPE ARANGO","5ta"],
+      [7,"ENRIQUE RIVERA","AMAURY GUZMÁN","5ta"]]},
+    { hora:"10:00 a.m.", h:10, partidos:[
+      [1,"GIOVANNI COLETTA","GERSON URIBE","4ta"],
+      [2,"ALEJANDRO MOUTHON","JUAN DAVID ARIAS","3ra"],
+      [3,"LORENZO ROMANO","OSMEL FARAC","5ta"],
+      [4,"JUAN PABLO PAREJA","JORGE BORRERO","4ta"]]},
+    { hora:"3:00 p.m.", h:15, partidos:[
+      [1,"SIMÓN GIMÉNEZ","DUVÁN CARDONA","5ta"],
+      [2,"CARLOS SANJUAN","BRANDO POLO","4ta"],
+      [3,"JUAN SEBASTIÁN CIFUENTES","REYNALDO AHUMADA","3ra"],
+      [4,"CAMILO SALADÉN","MARTÍN TARAZONA","4ta"],
+      [5,"JAVIER HURTADO","JUAN DIEGO VELÁSQUEZ","4ta"],
+      [6,"GUSTAVO GIMÉNEZ","SEBASTIAN HERRERA","4ta"],
+      [7,"RODRIGO ENSUNCHO","MATEO GIMÉNEZ","5ta"],
+      [8,"CRISTIAN FLÓREZ","GUSTAVO POTOSÍ","5ta"]]},
+    { hora:"4:30 p.m.", h:16.5, partidos:[
+      [1,"ORLANDO MARTÍNEZ","JOSÉ CARRASCAL","3ra"],
+      [2,"WILSON BORNACHERA","VIOLETA SILVA","5ta"],
+      [3,"ANDRÉS SALCEDO","GABRIEL AGUILAR","4ta"],
+      [4,"ALEJANDRO PAREJA","NICOL GONZALEZ","3ra"],
+      [5,"NELLYMAR MANSEBO","ANA MURGAS","Damas"],
+      [6,"IVÁN VELASQUEZ","ADRIANO GUETTE","4ta"],
+      [7,"LAURA CABRERA","SHAIRA GONZÁLEZ","Damas"],
+      [8,"LUIS GÓMEZ","SERGIO DELL'ORO","3ra"]]},
+    { hora:"6:00 p.m.", h:18, partidos:[
+      [1,"MARÍA JOSÉ BAYONA","LEONARDO VERA","3ra"],
+      [2,"BREINY BOTET","MARÍA JOSÉ PRADO","Damas"],
+      [3,"LAURA CHALA","ANGELINA CHEDRAUY","Damas"],
+      [4,"ALEJANDRA BLANCO","MARÍA JOSÉ CABALLERO","Damas"],
+      [5,"JAN RODRÍGUEZ","JOSÉ BERMEJO","4ta"],
+      [6,"JORGE DUQUE","MAURICIO GIL","4ta"],
+      [7,"ANGÉLICA MARTÍNEZ","ARI SOLANO","Damas"],
+      [8,"SHADIA QUEVEDO","STELLA DE AVILA","Damas"]]},
+    { hora:"7:00 p.m.", h:19, partidos:[
+      [1,"GABRIEL ENSUNCHO","YEISSON CASTRO","5ta"],
+      [2,"EMMANUEL BAYONA","RAFAEL NOYA","4ta"],
+      [3,"JOSUÉ ROCA","ROY PÉREZ","5ta"],
+      [4,"ALDAIR TORRENEGRA","ANDRÉS ROMÁN","4ta"],
+      [5,"NÉSTOR CUELLO","CARLOS BATISTA","5ta"]]}
+  ]}
+];
+
+let dayIdx=0, catF="Todas";
+const qs=document.getElementById("qs");
+function renderSched(){
+  const d=PROGRAMACION[dayIdx], term=norm(qs.value.trim());
+  setPdf(document.getElementById("dls"),d.pdf,`programacion-${norm(d.dia).replace(/\s+/g,"-")}.pdf`);
+  // turno actual/próximo si hoy es el día
+  const now=new Date(), today=now.toLocaleDateString("en-CA",{timeZone:"America/Bogota"});
+  const hNow=Number(now.toLocaleString("en-US",{timeZone:"America/Bogota",hour:"numeric",hour12:false}))+now.getMinutes()/60;
+  let nextIdx=-1; if(today===d.fecha) nextIdx=d.turnos.findIndex(t=>t.h+1.5>hNow);
+  let html="";
+  d.turnos.forEach((t,ti)=>{
+    const ms=t.partidos.filter(p=>(catF==="Todas"||p[3]===catF)&&(!term||norm(p[1]+" "+p[2]).includes(term)));
+    if(!ms.length) return;
+    const live=ti===nextIdx?(t.h<=hNow?"EN JUEGO":"PRÓXIMO TURNO"):"";
+    html+=`<div class="slot"><div class="time"><b>${t.hora}</b><small>${ms.length} partido${ms.length>1?"s":""}</small>${live?`<span class="live">${live}</span>`:""}</div><div class="matches">`;
+    ms.forEach(([c,a,b,cat])=>{
+      const hit=term?" hit":"";
+      html+=`<div class="match${hit}"><div class="court"><small>CANCHA</small><b>${c}</b></div><div class="players"><span>${cap(a)}</span><i>VS</i><span>${cap(b)}</span></div><span class="tag c${cat.toLowerCase()}">${cat}</span></div>`;
+    });
+    html+=`</div></div>`;
+  });
+  document.getElementById("sched").innerHTML=html||`<div class="sched-empty">No hay partidos que coincidan con la búsqueda.</div>`;
+}
+const daysEl=document.getElementById("days");
+PROGRAMACION.forEach((d,i)=>{
+  const b=document.createElement("button");
+  b.className="day"+(i===dayIdx?" active":"");
+  const n=d.turnos.reduce((a,t)=>a+t.partidos.length,0);
+  b.innerHTML=`<b>${d.dia}</b><small>${n} partidos</small>`;
+  b.onclick=()=>{dayIdx=i;daysEl.querySelectorAll(".day").forEach((x,j)=>x.classList.toggle("active",j===i));renderSched();};
+  daysEl.appendChild(b);
+});
+const chipsEl=document.getElementById("chips");
+["Todas","2da","3ra","4ta","5ta","Damas"].forEach(c=>{
+  const b=document.createElement("button");
+  b.className="chip"+(c===catF?" active":""); b.textContent=c;
+  b.onclick=()=>{catF=c;chipsEl.querySelectorAll(".chip").forEach(x=>x.classList.toggle("active",x===b));renderSched();};
+  chipsEl.appendChild(b);
+});
+qs.addEventListener("input",renderSched);
+renderSched(); setInterval(renderSched,60000);
+render();
+
+document.getElementById("st-players").textContent=Object.values(CUADROS).reduce((a,c)=>a+c.grupos.flat().filter(Boolean).length,0);
+document.getElementById("st-groups").textContent=Object.values(CUADROS).reduce((a,c)=>a+c.grupos.length,0);
+
+// Cuenta regresiva
+const start=new Date("2026-11-28T07:00:00-05:00"), end=new Date("2026-12-12T23:59:00-05:00");
+function tick(){
+  const now=new Date(); let target=start;
+  if(now>=start&&now<end){document.getElementById("cd-title").textContent="FINALES EN";target=end;}
+  else if(now>=end){document.getElementById("cd-title").textContent="TORNEO FINALIZADO";}
+  const d=Math.max(0,target-now);
+  [["d",864e5],["h",36e5],["m",6e4],["s",1e3]].reduce((r,[id,ms])=>{document.getElementById("cd-"+id).textContent=String(Math.floor(r/ms)).padStart(2,"0");return r%ms;},d);
+}
+tick(); setInterval(tick,1000);
+
+document.querySelectorAll(".gallery figure").forEach(f=>f.onclick=()=>{document.getElementById("lb-img").src=f.querySelector("img").src;document.getElementById("lb").classList.add("open");});
+document.querySelectorAll("#menu a").forEach(a=>a.onclick=()=>document.getElementById("menu").classList.remove("open"));
+const showAll=()=>document.querySelectorAll(".reveal").forEach(el=>el.classList.add("in"));
+if("IntersectionObserver" in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{threshold:.12});
+  document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+  setTimeout(showAll,2500); // respaldo: nada queda oculto aunque el visor no anime
+} else showAll();
+window.addEventListener("beforeprint",showAll);
+</script>
+</body>
+</html>
